@@ -1,10 +1,73 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="jakarta.faces.facelets"
+                template="template.xhtml">
+
+    <ui:define name="contenido">
+
+        <!-- Sección Hero -->
+        <p:card style="padding:25px; margin-bottom:25px;">
+            <h2 style="margin-bottom:10px;">Hola, soy <strong>[Tu Nombre]</strong></h2>
+            <p>Desarrolladora y estudiante de Ingeniería en Tecnologías de la Información.</p>
+
+            <p:divider/>
+
+            <p>Este portafolio está desarrollado utilizando:</p>
+            <ul>
+                <li>PrimeFaces (Jakarta)</li>
+                <li>Java + JSF</li>
+                <li>HTML, CSS y Bootstrap</li>
+            </ul>
+        </p:card>
+
+        <!-- Sección Proyectos -->
+        <p:card header="Proyectos Destacados" style="margin-bottom:25px;">
+            <div class="grid">
+
+                <div class="col-12 md:col-4">
+                    <p:card style="margin:10px;">
+                        <h3>Agenda con PrimeFaces</h3>
+                        <p>Sistema CRUD profesional con Java EE.</p>
+                        <p:badge value="Java" severity="info"/>
+                        <p:badge value="PrimeFaces" severity="success"/>
+                    </p:card>
+                </div>
+
+                <div class="col-12 md:col-4">
+                    <p:card style="margin:10px;">
+                        <h3>Lista de Tareas</h3>
+                        <p>Aplicación dinámica con interfaz moderna.</p>
+                        <p:badge value="JSF" severity="warning"/>
+                        <p:badge value="Front-end" severity="info"/>
+                    </p:card>
+                </div>
+
+                <div class="col-12 md:col-4">
+                    <p:card style="margin:10px;">
+                        <h3>Sistema Escolar</h3>
+                        <p>Proyecto para administración de alumnos.</p>
+                        <p:badge value="MySQL" severity="danger"/>
+                        <p:badge value="Java EE" severity="secondary"/>
+                    </p:card>
+                </div>
+
+            </div>
+        </p:card>
+
+
+        <p:card header="Contacto Profesional">
+            <p>Si deseas ponerte en contacto conmigo, llena este formulario:</p>
+
+            <h:form>
+                <p:inputText placeholder="Tu nombre" style="margin-bottom:10px; width:300px;"/><br/>
+                <p:inputText placeholder="Correo electrónico" style="margin-bottom:10px; width:300px;"/><br/>
+                <p:inputTextarea placeholder="Tu mensaje" style="margin-bottom:10px;" rows="4"/><br/>
+                <p:commandButton value="Enviar" icon="pi pi-send" styleClass="p-button-success"/>
+            </h:form>
+        </p:card>
+
+    </ui:define>
+
+</ui:composition>
+
